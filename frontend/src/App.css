@@ -46,8 +46,8 @@
   display: inline-flex;
   flex-wrap: wrap; /* Allow cards to wrap to the next line if necessary */
   justify-content: space-around; /* Distribute cards evenly */
-  gap: 20px; /* Add space between the cards */
-  padding: 20px; /* Optional: add padding around the container */
+  gap: 3px; /* Add space between the cards */
+  padding: 10px; /* Optional: add padding around the container */
 }
 
 .card-container .card {
@@ -65,10 +65,12 @@
   object-fit: cover; /* Cover the card area without distorting the image */
 }
 
-.input-group {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
+.card-container .card-link {
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Inherit text color */
+  flex: 1 1 300px; /* Grow and shrink with a minimum width of 200px */
+  max-width: 400px; /* Optional: set a maximum width for each card */
+  /* display: block; Make the link fill the card */
 }
 
 .form-outline {
@@ -76,39 +78,46 @@
   margin-right: 10px;
 }
 
-.form-control {
-  width: 50%; /* Make sure the input takes full width of its container */
-  padding: 8px 10px; /* Add padding for a larger input box */
-  font-size: 1.2em; /* Increase font size for better readability */
-}
-/* .flip-card {
+.flip-card {
   perspective: 1000px;
   margin: 10px;
+  background-color: transparent;
+  width: 1000px;
+  height: 750px;
 }
 
 .flip-card-inner {
   position: relative;
   width: 100%;
-  /* height: 50%; */
-  /* transition: transform 0.6s;
+  height: 100%;
+  /* text-align: center; */
+  transition: transform 0.6s;
   transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
 }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
- .flip-card-front, .flip-card-back {
-  position: relative;
+ /* .flip-card-front, .flip-card-back {
+  position: absolute;
   width: 100%;
-  height: 50%;
-  backface-visibility: visible;
+  height: 100%;
+  backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #ccc;
   border-radius: 10px;
- }
+ } */
 
 .flip-card-front {
   background-color: #fff;
@@ -120,4 +129,8 @@
   transform: rotateY(180deg);
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-} */ 
+}
+
+.card-font-size {
+  font-size: 0.85rem;
+}
