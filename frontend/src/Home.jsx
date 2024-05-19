@@ -1,6 +1,6 @@
 import "./App.css";
 import GalaxyWallpaper1 from "./assets/GalaxyWallpaper1.png";
-import { Card } from "react-bootstrap";
+import { Card, CardGroup } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 // import plantService from "./services/plantService";
 
@@ -46,23 +46,26 @@ function Home() {
       <img className="background-container" src={GalaxyWallpaper1} alt="galaxy" />
       <div className="card-container">
         {plants.map((plant, index) => (
-          
+          <CardGroup>
+
           <Card className="flip-card" key={index}>
             <div className="flip-card-inner">
               <div className="flip-card-front">
                 <Card.Img variant="top" src={plant.image} alt={plant.name} />
               </div>
               <div className="flip-card-back" style={{ backgroundImage: `url(${plant.image})` }}>
-                <Card.Body>
+                <Card.Body className="d-flex justify-content-center align-items-center card-font-size">
                   <Card.Title className="font">{plant.name}</Card.Title>
                   <Card.Text className="font">{plant.binomialName}</Card.Text>
                   <Card.Text className="font">{plant.description}</Card.Text>
                   <Card.Text className="font">{plant.sunlight}</Card.Text>
-                  <Card.Text className="font">{plant.sowingMethod}</Card.Text>
+                  {/* <Card.Text className="font">{plant.sowingMethod}</Card.Text> */}
                 </Card.Body>
               </div>
             </div>
           </Card>
+          
+          </CardGroup>
         ))}
       </div>
     </React.Fragment>
