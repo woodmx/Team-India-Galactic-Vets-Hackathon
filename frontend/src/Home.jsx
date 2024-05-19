@@ -1,17 +1,10 @@
 import "./App.css";
 import GalaxyWallpaper1 from "./assets/GalaxyWallpaper1.png";
-import { Card, CardGroup } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
-// import plantService from "./services/plantService";
 
 function Home() {
   const [plants, setPlants] = useState([]);
-
-  // useEffect(() => {
-  //   plantService.getCrops().then(onSuccess).catch(onError)
-  // }, []);
-
-  const [cropData, setCropData] = useState([]);
 
   useEffect(() => {
     const fetchCrops = async () => {
@@ -25,19 +18,9 @@ function Home() {
         console.error("Error fetching the crop data:", error);
       }
     };
-
     fetchCrops();
   }, []);
 
-  console.log(plants);
-
-  const onSuccess = (response) => {
-    setPlants(response.items); 
-  }
-
-  const onError = (error) => {
-    console.log("error", error)
-  }
 
   return (
     <React.Fragment>
@@ -46,8 +29,6 @@ function Home() {
       <img className="background-container" src={GalaxyWallpaper1} alt="galaxy" />
       <div className="card-container">
         {plants.map((plant, index) => (
-          <CardGroup>
-
           <Card className="flip-card" key={index}>
             <div className="flip-card-inner">
               <div className="flip-card-front">
@@ -59,17 +40,13 @@ function Home() {
                   <Card.Text className="font">{plant.binomialName}</Card.Text>
                   <Card.Text className="font">{plant.description}</Card.Text>
                   <Card.Text className="font">{plant.sunlight}</Card.Text>
-                  {/* <Card.Text className="font">{plant.sowingMethod}</Card.Text> */}
                 </Card.Body>
               </div>
             </div>
           </Card>
-          
-          </CardGroup>
         ))}
-      </div>
+      </div> 
     </React.Fragment>
   )
 }
-
 export default Home;

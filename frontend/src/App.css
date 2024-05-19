@@ -9,20 +9,6 @@
   font-family: "Lucida Console", Courier, monospace;
 }
 
-/* @keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
-} */
-
 .background-container {
   position: fixed;
   top: 0;
@@ -42,7 +28,7 @@
 }
 
 .card-container {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap; /* Allow cards to wrap to the next line if necessary */
   justify-content: space-around; /* Distribute cards evenly */
   gap: 3px; /* Add space between the cards */
@@ -50,8 +36,9 @@
 }
 
 .card-container .card {
-  flex: 1 1 300px; /* Grow and shrink with a minimum width of 200px */
-  max-width: 400px; /* Optional: set a maximum width for each card */
+  /* flex: 1 1 200px; Grow and shrink with a minimum width of 200px */
+  max-width: 600px; /* Optional: set a maximum width for each card */
+
   border: 3px solid white;
   border-radius: 5px; 
   box-shadow: 0 0 30px rgb(255, 255, 255); 
@@ -59,7 +46,7 @@
 
 .card-container .card img {
   width: 100%; /* Ensure the image fits within the card */
-  height: 100%; /* Maintain the aspect ratio */
+  height: 50%; /* Maintain the aspect ratio */
   object-fit: cover; /* Cover the card area without distorting the image */
 }
 
@@ -71,8 +58,9 @@
   /* display: block; Make the link fill the card */
 }
 
-.card-container .card-link:hover .card {
-  animation: shake 1s; /* Duration of the animation */
+.form-outline {
+  flex-grow: 0.95; /* Allow the input to grow and take up available space */
+  margin-right: 10px;
 }
 
 .flip-card {
@@ -104,10 +92,21 @@
   transform: rotateY(180deg);
 }
 
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+ }
 
 .flip-card-front {
   background-color: #fff;
-}
+} 
 
 .flip-card-back {
   background-size: cover;
