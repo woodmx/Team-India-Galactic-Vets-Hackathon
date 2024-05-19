@@ -1,0 +1,146 @@
+[
+    {
+        "model": "crops.Crop",
+        "pk": 1,
+        "fields": {
+            "name": "Tomato",
+            "binomial_name": "Solanum lycopersicum",
+            "description": "The tomato is the fruit of the tomato plant, a member of the Nightshade family (Solanaceae). The fruit grows on a small compact bush.",
+            "sunlight": "Full Sun",
+            "sowing_method": "Direct seed indoors, transplant seedlings outside after hardening off",
+            "photo": "https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/5dc3618ef2c1020004f936e4.jpg?1573085580"
+        }
+    },
+    {
+        "model": "crops.Crop",
+        "pk": 2,
+        "fields": {
+            "name": "Potato",
+            "binomial_name": "Solanum tuberosum",
+            "description": "Potatoes are starchy root vegetables in the Solanaceae, or Nightshade, family, which also includes tomatoes, eggplants, and peppers. They originated in South America, and spread to become a worldwide staple. The leaves and fruit are usually poisonous and the stem tuber is the only edible part once it is cooked. The potato can be cooked in many ways, brewed into alcohol, and also used as the basis for creating bioplastics. More growing information is available in individual species entries.",
+            "sunlight": "Full Sun",
+            "sowing_method": "Direct seed outdoors after last frost. Each piece must have one eye.",
+            "photo": "https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/551dbd5a3732390003600100.jpg?1428012376"
+        }
+    },
+    {
+        "model": "crops.Crop",
+        "pk": 3,
+        "fields": {
+            "name": "Lettuce",
+            "binomial_name": "Lactuca Sativa",
+            "description": "Lettuce is a cool weather crop and high temperatures will impede germination and/or cause the plant to bolt (go to seed quickly). Some hybrid cultivars have been bred to be more heat-resistant.",
+            "sunlight": "Partial Sun",
+            "sowing_method": "Direct seed outdoors, thin to 20cm when seedlings are 3cm tall",
+            "photo": "https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/551dcbb23732390003790100.jpg?1428016048"
+        }
+    },
+    {
+        "model": "crops.Crop",
+        "pk": 4,
+        "fields": {
+            "name": "Carrot",
+            "binomial_name": "Daucus Carota",
+            "description": "The carrot is a root vegetable. It is usually orange in color, but some cultivars are purple, black, red, white, and yellow. The most commonly eaten part of the plant is the taproot, but the greens are sometimes eaten as well. The leaves appear first, and the taproot grows more slowly beneath the soil. Fast-growing cultivars mature within three months of sowing the seed. Slower-maturing cultivars are harvested four months after sowing.",
+            "sunlight": "Full Sun",
+            "sowing_method": "Direct Seed, thin to 3cm apart when seedlings are 8cm high",
+            "photo": "https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/58c312395865650004000000.jpg?1489179191"
+        }
+    },
+    {
+        "model": "crops.Crop",
+        "pk": 5,
+        "fields": {
+            "name": "Orange",
+            "binomial_name": "Citrus \u00d7 sinensis",
+            "description": "The Orange is a tropical evergreen tree that produces round orange fruits, also known as \"Oranges.\" Many species are self-pollinating, but having multiple trees for cross pollination can improve fruit size. Trees need temperatures between 21-32\u00b0 C to grow properly and produce fruit. Oranges can usually withstand winter temperatures down to -6.1\u00b0 C without experiencing damage to their leaves or trunk. Trees will bear fruit 2-3 years after transplanting.8",
+            "sunlight": "Full Sun",
+            "sowing_method": "Transplant grafted sapling",
+            "photo": "https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/54b4aef16130650002050000.jpg?1421127404"
+        }
+    },
+    {
+        "model": "crops.Crop",
+        "pk": 6,
+        "fields": {
+            "name": "Strawberry",
+            "binomial_name": "Fragaria \u00d7 ananassa",
+            "description": "Strawberries are a hybrid species of the genus Fragaria that produce sweet, bright red fruits. \n\nThere are three main types of strawberries: \n\n1) summer-fruiting: produce a single, large crop of fruit the year after planting. To grow, transplant plugs or crowns in early spring in rows spaced at least 120cm apart. Pinch off all flowers the first season and train the plant's runners, pressing them into the soil 15-22cm apart from the mother plant. Mulch with straw or pine needles in the fall when the plants have died back. When the plants start to grow back in the spring, move the mulch aside. After harvest the second season, set a lawnmower to about 10cm high and mow, being sure not to damage crowns.\n\n The other two types are \n\n2) Ever-bearing and 3) Day Neutral, both of which send out less runners and bear several crops of smaller fruit throughout the season. These two types can be grown using raised beds about 20cm high and 60cm wide. Transplant crowns or plugs in staggered double rows, about 30cm apart. Remove runners and flowers until July of the first year to give the roots time to develop, and then allow plants to produce fruit. All types of strawberries begin to produce fewer and less sweet fruit once they are two years or older. Because strawberries are a hybrid, seeds will not breed true. Strawberries are predominantly propagated using bare root plugs or crowns or dividing runners. Make sure not to bury the crown when transplanting plugs.",
+            "sunlight": "Full Sun",
+            "sowing_method": "Transplant bare root plants/plugs or divide runners",
+            "photo": "https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/551dc6103732390003730100.jpg?1428014606"
+        }
+    },
+    {
+        "model": "crops.Crop",
+        "pk": 7,
+        "fields": {
+            "name": "Kale",
+            "binomial_name": "Brassica oleracea (acephala)",
+            "description": "Kale is a cultivar of the species Brassica oleracea. It has green or purple leaves that branch off from one to multiple upright stems and do not form a head like cabbage. The plant is usually grown as an annual, but if grown as a perennial, it will form seeds in the second year. Current popular varieties include Curly kale, Italian kale, and Red Russian kale (green leaves with pale purple stems). It can be grown as baby salad greens or for bunching adult leaves. Leaves are sweeter after a frost and delicious eaten raw, added to salads, saut\u00e9ed, or added to stews and casseroles.",
+            "sunlight": "Full Sun",
+            "sowing_method": "Direct seed. If planting indoors, harden off before transplanting seedlings outside.",
+            "photo": "https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/55b6b7ce6465380003910200.jpg?1438037945"
+        }
+    },
+    {
+        "model": "crops.Crop",
+        "pk": 8,
+        "fields": {
+            "name": "Broccoli",
+            "binomial_name": "Brassica oleracea",
+            "description": "Broccoli has large flower heads known as \"crowns\" that are green to blue-green in color, grouped tightly together atop a thick stem, and surrounded by leaves. Broccoli resembles cauliflower, a different cultivar in its species. It thrives in cool weather.",
+            "sunlight": "Full Sun",
+            "sowing_method": "Sow seeds indoors and transplant outside",
+            "photo": "https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/54b4b5ea61306500020b0000.jpg?1421129190"
+        }
+    },
+    {
+        "model": "crops.Crop",
+        "pk": 9,
+        "fields": {
+            "name": "Asparagus",
+            "binomial_name": "Asparagus officinalis",
+            "description": "Perennial spring vegetable often sown from crowns. The vegetable has a mild flavor with earthy undertones. When mature and reproducing, the plant creates tall, stout stems with feathery foliage and small red berries.",
+            "sunlight": "Full Sun",
+            "sowing_method": "Transplant crowns outside, or start seeds indoors",
+            "photo": "https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/551dc1e837323900036a0100.jpg?1428013539"
+        }
+    },
+    {
+        "model": "crops.Crop",
+        "pk": 10,
+        "fields": {
+            "name": "Purple Cauliflower",
+            "binomial_name": "Brassica oleracea var. botrytis",
+            "description": "Purple cauliflower is a cultivar of cauliflower that grows purple. Like regular cauliflower, it does not do well in hot weather. It's purple color comes from anthocyanins (the same antioxidants found in red wine). To retain the color, sprinkle with vinegar or lemon juice before cooking.",
+            "sunlight": "Full Sun",
+            "sowing_method": "Direct seed indoors, transplant seedlings outside after hardening off",
+            "photo": "https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/58c9bf01f577a40004000165.jpg?1489616631"
+        }
+    },
+    {
+        "model": "crops.Crop",
+        "pk": 11,
+        "fields": {
+            "name": "Watermelon",
+            "binomial_name": "Citrullus lanatus",
+            "description": "The watermelon is a species of melon that produces round or oblong fruits with thick skin and sweet, watery flesh. It is a special kind of berry with a hard rind and no internal division, botanically known as a \"pepo.\" The rind is usually dark green with light-green stripes. The flesh can be red or yellow. Like other melons and members of the Cucurbitaceae family, the watermelon grows on sprawling vines.",
+            "sunlight": "Full Sun",
+            "sowing_method": "Direct seed into soil or peat pots (and transplant pots directly into soil after hardening off)",
+            "photo": "https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/591e1e22dfdcf50004000001.jpg?1495146011"
+        }
+    },
+    {
+        "model": "crops.Crop",
+        "pk": 12,
+        "fields": {
+            "name": "Cantaloupe Melon",
+            "binomial_name": "cucumis melo var. cantalupensis",
+            "description": "Cantaloupe, Cucumis melo, is a vining plant in the family Cucurbitaceae, grown for its large, sweet fruit of the same name. Cantaloupe vines are trailing and are slightly hairy with simple oval leaves arranged alternately on the stem. The plant produces small yellow flowers which are 1.2\u20133.0 cm (0.5\u20131.2 in) in diameter and large oval to round fruit with green to orange flesh. Melon is an annual plant and a vine can grow up to 3 m (9.8 ft) in length. Cantaloupe may be referred to as muskmelon or melon and likely originate from East and Northeast Africa.",
+            "sunlight": "Full Sun",
+            "sowing_method": "Direct seed. If planting indoors, use peat pots and harden off before transplanting seedlings outside.",
+            "photo": "https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/65223b81ddb8c300027b3e4e.jpg?1696742272"
+        }
+    }
+]
