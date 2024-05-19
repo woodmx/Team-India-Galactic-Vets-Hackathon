@@ -1,14 +1,13 @@
 import axios from "axios";
 
 let plantService = {
-  endpoint: "http://localhost:5173/",
+  endpoint: "http://localhost:8000/api/v1/crops/",
 };
 
-const plant = () => {
+plantService.getCrops = () => {
   const config = {
-    method: "",
+    method: "GET",
     url: `${plantService.endpoint}`,
-    data: payload,
     withCredentials: true,
     crossdomain: true,
     headers: { "Content-Type": "application/json" }
