@@ -1,10 +1,23 @@
-import GalaxyWallpaper1 from "./assets/GalaxyWallpaper1.png";
-import Tomatoes from "./assets/Tomatoes.png";
 import "./App.css";
+import GalaxyWallpaper1 from "./assets/GalaxyWallpaper1.png";
 import { Card } from "react-bootstrap";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import plantService from "./services/plantService";
 
 function Home() {
+  const [plants, setPlants] = useState([]);
+
+  useEffect(() => {
+    plantService.getCrops().then(onSuccess).catch(onError)
+  }, []);
+
+  const onSuccess = (response) => {
+    setPlants(response.items); 
+  }
+
+  const onError = (error) => {
+    console.log("error", error)
+  }
 
   return (
     <React.Fragment>
@@ -12,144 +25,27 @@ function Home() {
       <h2 className="font">" Sowing Seeds Among the Stars "</h2>
       <img className="background-container" src={GalaxyWallpaper1} alt="galaxy" />
       <div className="card-container">
-      
-        <a 
-          href="https://example.com"  
-          rel="noopener noreferrer"
-          target="_blank"
-          className="card-link"
-        >
-        <Card>
-          <Card.Img variant="top" src={Tomatoes} alt="tomatoes" />
-          <Card.Body>
-            <Card.Title className="font">Tomato</Card.Title>
-            <Card.Text className="font">Solanum lycopersicum</Card.Text>
-          </Card.Body>
-        </Card>
-        </a>
-
-        <a 
-          href="https://example.com"  
-          rel="noopener noreferrer"
-          target="_blank"
-          className="card-link"
-        >
-        <Card>
-          <Card.Img variant="top" src={Tomatoes} alt="tomatoes" />
-          <Card.Body>
-            <Card.Title className="font">Lettuce</Card.Title>
-            <Card.Text className="font">Lactuca Sativa</Card.Text>
-          </Card.Body>
-        </Card>
-        </a>
-
-        <a 
-          href="https://example.com" 
-          rel="noopener noreferrer"
-          target="_blank"
-          className="card-link"
-        >
-        <Card>
-          <Card.Img variant="top" src={Tomatoes} alt="tomatoes" />
-          <Card.Body>
-            <Card.Title className="font">Potato</Card.Title>
-            <Card.Text className="font">Solanum tuberosum</Card.Text>
-          </Card.Body>
-        </Card>
-        </a>
-
-        <a 
-          href="https://example.com"  
-          rel="noopener noreferrer"
-          target="_blank"
-          className="card-link"
-        >
-        <Card>
-          <Card.Img variant="top" src={Tomatoes} alt="tomatoes" />
-          <Card.Body>
-            <Card.Title className="font">Carrot</Card.Title>
-            <Card.Text className="font">Daucus Carota</Card.Text>
-          </Card.Body>
-        </Card>
-        </a>
-
-      <a 
-          href="https://example.com"  
-          rel="noopener noreferrer"
-          target="_blank"
-          className="card-link"
-        >
-        <Card>
-          <Card.Img variant="top" src={Tomatoes} alt="tomatoes" />
-          <Card.Body>
-            <Card.Title className="font">Orange</Card.Title>
-            <Card.Text className="font">Citrus × sinensis</Card.Text>
-          </Card.Body>
-        </Card>
-        </a>
-
-      <a 
-          href="https://example.com"  
-          rel="noopener noreferrer"
-          target="_blank"
-          className="card-link"
-        >
-        <Card>
-          <Card.Img variant="top" src={Tomatoes} alt="tomatoes" />
-          <Card.Body>
-            <Card.Title className="font">Strawberry</Card.Title>
-            <Card.Text className="font">Fragaria × ananassa</Card.Text>
-          </Card.Body>
-        </Card>
-        </a>
-
-        <a 
-          href="https://example.com"  
-          rel="noopener noreferrer"
-          target="_blank"
-          className="card-link"
-        >
-        <Card>
-          <Card.Img variant="top" src={Tomatoes} alt="tomatoes" />
-          <Card.Body>
-            <Card.Title className="font">Cucumber</Card.Title>
-            <Card.Text className="font">cucumis sativus</Card.Text>
-          </Card.Body>
-        </Card>
-        </a>
-
-        <a 
-          href="https://example.com"  
-          rel="noopener noreferrer"
-          target="_blank"
-          className="card-link"
-        >
-        <Card>
-          <Card.Img variant="top" src={Tomatoes} alt="tomatoes" />
-          <Card.Body>
-            <Card.Title className="font">Bell Pepper</Card.Title>
-            <Card.Text className="font">Capsicum annuum</Card.Text>
-          </Card.Body>
-        </Card>
-        </a>
-
-        <a 
-          href="https://example.com"  
-          rel="noopener noreferrer"
-          target="_blank"
-          className="card-link"
-        >
-        <Card>
-          <Card.Img variant="top" src={Tomatoes} alt="tomatoes" />
-          <Card.Body>
-            <Card.Title className="font">Spinach</Card.Title>
-            <Card.Text className="font">Spinacia oleracea</Card.Text>
-          </Card.Body>
-        </Card>
-        </a>
-       
+        {plants.map((plant, index) => (
+          <Card className="flip-card" key={index}>
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <Card.Img variant="top" src={plant.image} alt={plant.name} />
+              </div>
+              <div className="flip-card-back" style={{ backgroundImage: `url(${plant.image})` }}>
+                <Card.Body>
+                  <Card.Title className="font">{plant.name}</Card.Title>
+                  <Card.Text className="font">{plant.binomialName}</Card.Text>
+                  <Card.Text className="font">{plant.description}</Card.Text>
+                  <Card.Text className="font">{plant.sunlight}</Card.Text>
+                  <Card.Text className="font">{plant.sowingMethod}</Card.Text>
+                </Card.Body>
+              </div>
+            </div>
+          </Card>
+        ))}
       </div>
     </React.Fragment>
   )
 }
+
 export default Home;
