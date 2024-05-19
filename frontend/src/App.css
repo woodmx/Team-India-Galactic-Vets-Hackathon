@@ -7,6 +7,7 @@
 
 .font {
   font-family: "Lucida Console", Courier, monospace;
+  font-size: small;
 }
 
 /* @keyframes shake {
@@ -42,7 +43,7 @@
 }
 
 .card-container {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap; /* Allow cards to wrap to the next line if necessary */
   justify-content: space-around; /* Distribute cards evenly */
   gap: 20px; /* Add space between the cards */
@@ -50,8 +51,9 @@
 }
 
 .card-container .card {
-  flex: 1 1 300px; /* Grow and shrink with a minimum width of 200px */
-  max-width: 400px; /* Optional: set a maximum width for each card */
+  /* flex: 1 1 200px; Grow and shrink with a minimum width of 200px */
+  max-width: 600px; /* Optional: set a maximum width for each card */
+
   border: 3px solid white;
   border-radius: 5px; 
   box-shadow: 0 0 30px rgb(255, 255, 255); 
@@ -59,23 +61,27 @@
 
 .card-container .card img {
   width: 100%; /* Ensure the image fits within the card */
-  height: 100%; /* Maintain the aspect ratio */
+  height: 50%; /* Maintain the aspect ratio */
   object-fit: cover; /* Cover the card area without distorting the image */
 }
 
-.card-container .card-link {
-  text-decoration: none; /* Remove underline from the link */
-  color: inherit; /* Inherit text color */
-  flex: 1 1 300px; /* Grow and shrink with a minimum width of 200px */
-  max-width: 400px; /* Optional: set a maximum width for each card */
-  display: block; /* Make the link fill the card */
+.input-group {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
 }
 
-.card-container .card-link:hover .card {
-  animation: shake 1s; /* Duration of the animation */
+.form-outline {
+  flex-grow: 0.95; /* Allow the input to grow and take up available space */
+  margin-right: 10px;
 }
 
-.flip-card {
+.form-control {
+  width: 50%; /* Make sure the input takes full width of its container */
+  padding: 8px 10px; /* Add padding for a larger input box */
+  font-size: 1.2em; /* Increase font size for better readability */
+}
+/* .flip-card {
   perspective: 1000px;
   margin: 10px;
 }
@@ -83,8 +89,8 @@
 .flip-card-inner {
   position: relative;
   width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
+  /* height: 50%; */
+  /* transition: transform 0.6s;
   transform-style: preserve-3d;
 }
 
@@ -92,26 +98,26 @@
   transform: rotateY(180deg);
 }
 
- /* .flip-card-front, .flip-card-back {
-  position: absolute;
+ .flip-card-front, .flip-card-back {
+  position: relative;
   width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+  height: 50%;
+  backface-visibility: visible;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #ccc;
   border-radius: 10px;
- } */
+ }
 
 .flip-card-front {
   background-color: #fff;
-}
+} */
 
-.flip-card-back {
+/* .flip-card-back {
   background-size: cover;
   background-position: center;
   transform: rotateY(180deg);
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-}
+} */ 

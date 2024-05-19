@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 
 // let plantService = {
 //   endpoint: "http://localhost:8000/api/v1/crops/",
@@ -17,11 +17,11 @@ import axios from "axios";
 // export default plantService;
 
 
-export async function getAllCrops() {
-  const response = axios.get('http://localhost:8000/api/v1/crops/', {
-    headers: {
-      "Content-Type": "application/json"
-    }
-  })
-  return response
-}
+// export async function getAllCrops() {
+//   const response = axios.get('http://localhost:8000/api/v1/crops/', {
+//     headers: {
+//       "Content-Type": "application/json"
+//     }
+//   })
+//   return response
+// }

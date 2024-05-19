@@ -11,7 +11,7 @@ function Home() {
   //   plantService.getCrops().then(onSuccess).catch(onError)
   // }, []);
 
-  const [cropData, setCropData] = useState([]);
+  // const [cropData, setCropData] = useState([]);
 
   useEffect(() => {
     const fetchCrops = async () => {
@@ -31,28 +31,24 @@ function Home() {
 
   console.log(plants);
 
-  const onSuccess = (response) => {
-    setPlants(response.items); 
-  }
+  // const onSuccess = (response) => {
+  //   setPlants(response.items); 
+  // }
 
-  const onError = (error) => {
-    console.log("error", error)
-  }
+  // const onError = (error) => {
+  //   console.log("error", error)
+  // }
 
   return (
     <React.Fragment>
-      <h1 className="font">Interstellar Greenhouse</h1>
-      <h2 className="font">" Sowing Seeds Among the Stars "</h2>
+      <h1 className="font-xxl">Interstellar Greenhouse</h1>
+      <h2 className="font-xl">" Sowing Seeds Among the Stars "</h2>
       <img className="background-container" src={GalaxyWallpaper1} alt="galaxy" />
       <div className="card-container">
         {plants.map((plant, index) => (
           
-          <Card className="flip-card" key={index}>
-            <div className="flip-card-inner">
-              <div className="flip-card-front">
+            <Card className="card-container" key={index}>
                 <Card.Img variant="top" src={plant.image} alt={plant.name} />
-              </div>
-              <div className="flip-card-back" style={{ backgroundImage: `url(${plant.image})` }}>
                 <Card.Body>
                   <Card.Title className="font">{plant.name}</Card.Title>
                   <Card.Text className="font">{plant.binomialName}</Card.Text>
@@ -60,13 +56,10 @@ function Home() {
                   <Card.Text className="font">{plant.sunlight}</Card.Text>
                   <Card.Text className="font">{plant.sowingMethod}</Card.Text>
                 </Card.Body>
-              </div>
-            </div>
-          </Card>
+            </Card>
         ))}
-      </div>
+      </div> 
     </React.Fragment>
   )
 }
-
 export default Home;
