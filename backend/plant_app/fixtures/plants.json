@@ -1,0 +1,157 @@
+
+[
+    {
+        "common_name": "Tomato",
+        "slug": "solanum-lycopersicum",
+        "image_url": "https://bs.plantnet.org/image/o/400851a79391dbe6f667c66e4bf70299e9921853",
+        "growth": {
+            "ph_maximum": 7.5,
+            "ph_minimum": 7,
+            "light": 8,
+            "atmospheric_humidity": 5
+        }
+    },
+    {
+        "common_name": "Potato",
+        "slug": "solanum-tuberosum",
+        "image_url": "https://bs.plantnet.org/image/o/43f82d540f236ec7d769dd7e977a289a80e8211a",
+        "growth": {
+            "ph_maximum": 8,
+            "ph_minimum": 7.5,
+            "light": 8,
+            "atmospheric_humidity": 5
+        }  
+    },
+    {
+        "common_name": "Garden lettuce",
+        "slug": "lactuca-sativa",
+        "image_url": "https://bs.plantnet.org/image/o/f341ecda99b08989111b43876fd6e81bdf5a783f",
+        "growth": {
+            "ph_maximum": 7,
+            "ph_minimum": 6,
+            "light": 6,
+            "atmospheric_humidity": 5
+        }  
+    },
+    {
+        "common_name": "Carrot",
+        "slug": "daucus-carota",
+        "image_url": "https://bs.plantnet.org/image/o/051631f859a3a433e2954747fa1bdb6bc09a0e66",
+        "growth": {
+            "ph_maximum": 7,
+            "ph_minimum": 6.5,
+            "light": 8,
+            "atmospheric_humidity": 5
+        }  
+    },
+    {
+        "common_name": "Orange",
+        "slug": "citrus-sinensis",
+        "image_url": "",
+        "growth": {
+            "ph_maximum": 8,
+            "ph_minimum": 6,
+            "light": 6,
+            "atmospheric_humidity": 5
+        }  
+    },
+    {
+        "common_name": "Strawberry", 
+        "slug": "fragaria-ananassa",
+        "image_url": "",
+        "growth": {
+            "ph_maximum": 6.5,
+            "ph_minimum": 5.5,
+            "light": 6,
+            "atmospheric_humidity": 6
+        }  
+    },
+    {
+        "common_name": "Wheat",
+        "slug": "Triticum aestivum",
+        "image_url": "",
+        "growth": {
+            "ph_maximum": 7.5,
+            "ph_minimum": 6.0,
+            "light": 6,
+            "atmospheric_humidity": 5
+        } 
+    },
+    {
+        "common_name": "Kale",
+        "slug": "brassica-oleracea",
+        "image_url": "https://bs.plantnet.org/image/o/c458ba0187608d0d178dcb9a5b6e7ed6aa1d9ef7",
+        "growth": {
+            "ph_maximum": 8,
+            "ph_minimum": 5.5,
+            "light": 9,
+            "atmospheric_humidity": 3
+        } 
+    },
+    {
+        "common_name": "Asparagus",
+        "slug": "asparagus-officinalis",
+        "image_url": "https://bs.plantnet.org/image/o/673e603f2370b1eddb2e5ec28b0818b73e5a594e",
+        "growth": {
+            "ph_maximum": 7.5,
+            "ph_minimum": 7,
+            "light": 6,
+            "atmospheric_humidity": 4
+        } 
+    },
+    {
+        "common_name": "Watermelon", 
+        "slug": "citrullus-lanatus",
+        "image_url": "https://bs.plantnet.org/image/o/95dc3ae9fa503a2a2e33de557bdfbab4abc183c3",
+        "growth": {
+            "ph_maximum": 6.8,
+            "ph_minimum": 6.0,
+            "light": 6,
+            "atmospheric_humidity": 7
+        } 
+    },
+    {
+        "common_name": "Cantaloupe Melon", 
+        "slug": "cucumis-melo",
+        "image_url": "https://bs.plantnet.org/image/o/d014a1d1f98846d0493a5c677e4b9ec029f57c5c",
+        "growth": {
+            "ph_maximum": 6.5,
+            "ph_minimum": 6.0,
+            "light": 6,
+            "atmospheric_humidity": 7
+        } 
+    },
+    {
+        "common_name": "Rice", 
+        "slug": "oryza-sativa",
+        "image_url": "https://bs.plantnet.org/image/o/5898f6ba6bdff105d07fee09b16e9c85f28b6672",
+        "growth": {
+             "ph_maximum": 7.5,
+             "ph_minimum": 7,
+            "light": 9,
+            "atmospheric_humidity": 9
+            }   
+        },
+        {
+        "common_name": "Watercress", 
+        "slug": "nasturtium-officinale",
+        "image_url": "https://bs.plantnet.org/image/o/30aa711880826af0a66f3aa09c551a160c7b992f",
+        "growth": {
+            "ph_maximum": 8,
+            "ph_minimum": 6.4,
+            "light": 7,
+            "atmospheric_humidity": 9
+            } 
+    },
+    {
+        "common_name": "Red Chile Pepper", 
+        "slug": "capsicum-annuum",
+        "image_url": "https://bs.plantnet.org/image/o/5fd5b1c84d4751583ce12cea7cd24d2d1da4fce6",
+        "growth": {
+            "ph_maximum": 6.8,
+            "ph_minimum": 6.0,
+            "light": 6,
+            "atmospheric_humidity": 5
+            } 
+    }
+]
