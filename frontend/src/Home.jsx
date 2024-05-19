@@ -41,8 +41,8 @@ function Home() {
 
   return (
     <React.Fragment>
-      <h1 className="font">Interstellar Greenhouse</h1>
-      <h2 className="font">" Sowing Seeds Among the Stars "</h2>
+      <h1 className="font text-color">Interstellar Greenhouse</h1>
+      <h2 className="font text-color">" Sowing Seeds Among the Stars "</h2>
       <img className="background-container" src={GalaxyWallpaper1} alt="galaxy" />
       <div className="card-container">
         {plants.map((plant, index) => (

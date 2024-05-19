@@ -4,7 +4,7 @@ function Footer() {
   return (
     <React.Fragment>
       <footer className="container">
-        <p>&copy; All rights reserved.</p>
+        <p className="text-color">&copy; All rights reserved.</p>
       </footer>
     </React.Fragment>
   )
