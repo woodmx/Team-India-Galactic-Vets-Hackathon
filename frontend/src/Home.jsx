@@ -1,43 +1,55 @@
 import "./App.css";
 import GalaxyWallpaper1 from "./assets/GalaxyWallpaper1.png";
 import { Card, CardGroup } from "react-bootstrap";
+import { getAllCrops } from "./api/backendCalls";
 import React, { useState, useEffect } from "react";
-// import plantService from "./services/plantService";
 
 function Home() {
   const [plants, setPlants] = useState([]);
-
-  // useEffect(() => {
-  //   plantService.getCrops().then(onSuccess).catch(onError)
-  // }, []);
+  
 
   const [cropData, setCropData] = useState([]);
+
+
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchCrops = async () => {
       try {
-        const response = await fetch('../src/assets/crops.json');
-        const data = await response.json();
-        if (data){
-          setPlants(data);
-        }
+        const data = await getAllCrops();
+        console.log("Fetched data:", data);
+        setPlants(data);
       } catch (error) {
+        setError("Error fetching the crop data");
         console.error("Error fetching the crop data:", error);
       }
     };
-
     fetchCrops();
-  }, []);
+
+
+  }, [])
+  
+
+  // useEffect(() => {
+  //   const fetchCrops = async () => {
+  //     try {
+  //       const data = await getAllCrops();
+  //       console.log(data, 'beforeeee')
+  //       if (data){
+  //         console.log(data, 'data data data')
+  //         setPlants(data);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching the crop data:", error);
+  //     }
+  //   };
+
+  //   fetchCrops();
+  // }, []);
 
   console.log(plants);
 
-  const onSuccess = (response) => {
-    setPlants(response.items); 
-  }
-
-  const onError = (error) => {
-    console.log("error", error)
-  }
+  
 
   return (
     <React.Fragment>
@@ -51,7 +63,7 @@ function Home() {
           <Card className="flip-card" key={index}>
             <div className="flip-card-inner">
               <div className="flip-card-front">
-                <Card.Img variant="top" src={plant.image} alt={plant.name} />
+                <Card.Img variant="top" src={plant.photo} alt={plant.name} />
               </div>
               <div className="flip-card-back" style={{ backgroundImage: `url(${plant.image})` }}>
                 <Card.Body className="d-flex justify-content-center align-items-center card-font-size">
