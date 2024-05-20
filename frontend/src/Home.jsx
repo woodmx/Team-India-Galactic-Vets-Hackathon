@@ -2,16 +2,20 @@ import "./App.css";
 import GalaxyWallpaper1 from "./assets/GalaxyWallpaper1.png";
 import { Card, CardGroup } from "react-bootstrap";
 import { getAllCrops } from "./api/backendCalls";
+
 import React, { useState, useEffect } from "react";
 
 function Home() {
   const [plants, setPlants] = useState([]);
+
   
 
   const [cropData, setCropData] = useState([]);
 
 
   const [error, setError] = useState(null);
+
+
 
   useEffect(() => {
     const fetchCrops = async () => {
@@ -27,29 +31,16 @@ function Home() {
     fetchCrops();
 
 
+
   }, [])
   
 
-  // useEffect(() => {
-  //   const fetchCrops = async () => {
-  //     try {
-  //       const data = await getAllCrops();
-  //       console.log(data, 'beforeeee')
-  //       if (data){
-  //         console.log(data, 'data data data')
-  //         setPlants(data);
-  //       }
-  //     } catch (error) {
-  //       console.error("Error fetching the crop data:", error);
-  //     }
-  //   };
-
-  //   fetchCrops();
-  // }, []);
 
   console.log(plants);
 
   
+
+
 
   return (
     <React.Fragment>
@@ -58,8 +49,6 @@ function Home() {
       <img className="background-container" src={GalaxyWallpaper1} alt="galaxy" />
       <div className="card-container">
         {plants.map((plant, index) => (
-          <CardGroup>
-
           <Card className="flip-card" key={index}>
             <div className="flip-card-inner">
               <div className="flip-card-front">
@@ -71,17 +60,13 @@ function Home() {
                   <Card.Text className="font">{plant.binomialName}</Card.Text>
                   <Card.Text className="font">{plant.description}</Card.Text>
                   <Card.Text className="font">{plant.sunlight}</Card.Text>
-                  {/* <Card.Text className="font">{plant.sowingMethod}</Card.Text> */}
                 </Card.Body>
               </div>
             </div>
           </Card>
-          
-          </CardGroup>
         ))}
-      </div>
+      </div> 
     </React.Fragment>
   )
 }
-
 export default Home;
