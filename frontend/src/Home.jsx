@@ -1,25 +1,45 @@
 import "./App.css";
 import GalaxyWallpaper1 from "./assets/GalaxyWallpaper1.png";
-import { Card } from "react-bootstrap";
+import { Card, CardGroup } from "react-bootstrap";
+import { getAllCrops } from "./api/backendCalls";
+
 import React, { useState, useEffect } from "react";
 
 function Home() {
   const [plants, setPlants] = useState([]);
 
+  
+
+  const [cropData, setCropData] = useState([]);
+
+
+  const [error, setError] = useState(null);
+
+
+
   useEffect(() => {
     const fetchCrops = async () => {
       try {
-        const response = await fetch('../src/assets/crops.json');
-        const data = await response.json();
-        if (data){
-          setPlants(data);
-        }
+        const data = await getAllCrops();
+        console.log("Fetched data:", data);
+        setPlants(data);
       } catch (error) {
+        setError("Error fetching the crop data");
         console.error("Error fetching the crop data:", error);
       }
     };
     fetchCrops();
-  }, []);
+
+
+
+  }, [])
+  
+
+
+  console.log(plants);
+
+  
+
 
 
   return (
@@ -32,7 +52,7 @@ function Home() {
           <Card className="flip-card" key={index}>
             <div className="flip-card-inner">
               <div className="flip-card-front">
-                <Card.Img variant="top" src={plant.image} alt={plant.name} />
+                <Card.Img variant="top" src={plant.photo} alt={plant.name} />
               </div>
               <div className="flip-card-back" style={{ backgroundImage: `url(${plant.image})` }}>
                 <Card.Body className="d-flex justify-content-center align-items-center card-font-size">
